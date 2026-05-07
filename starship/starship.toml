@@ -1,10 +1,12 @@
+# Starship — Catppuccin Mocha
+
 format = """
-[](fg:#3a3a3a)\
+[](fg:#45475a)\
 $directory\
-[](fg:#3a3a3a bg:#2a2a2a)\
+[](fg:#45475a bg:#313244)\
 $git_branch\
 $git_status\
-[](fg:#2a2a2a)\
+[](fg:#313244)\
 $fill\
 $cmd_duration\
 $python\
@@ -20,7 +22,7 @@ right_format = """$time"""
 symbol = ' '
 
 [directory]
-style = "fg:#d4d4d4 bg:#3a3a3a"
+style = "fg:#cdd6f4 bg:#45475a"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncate_to_repo = true
@@ -33,44 +35,44 @@ truncate_to_repo = true
 
 [git_branch]
 symbol = ""
-style = "fg:#d4d4d4 bg:#2a2a2a"
+style = "fg:#cdd6f4 bg:#313244"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "fg:#f44747 bg:#2a2a2a"
+style = "fg:#f38ba8 bg:#313244"
 format = '[$all_status$ahead_behind ]($style)'
 
 [cmd_duration]
 min_time = 2000
-style = "fg:#d7ba7d"
+style = "fg:#f9e2af"
 format = "[  $duration ]($style)"
 
 [python]
 symbol = " "
-style = "fg:#d7ba7d"
+style = "fg:#f9e2af"
 format = '[ $symbol($version) ]($style)'
 
 [nodejs]
 symbol = " "
-style = "fg:#6a9955"
+style = "fg:#a6e3a1"
 format = '[ $symbol($version) ]($style)'
 
 [rust]
 symbol = " "
-style = "fg:#f44747"
+style = "fg:#f38ba8"
 format = '[ $symbol($version) ]($style)'
 
 [golang]
 symbol = " "
-style = "fg:#4ec9b0"
+style = "fg:#94e2d5"
 format = '[ $symbol($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:#888888"
+style = "fg:#7f849c"
 format = '[  $time ]($style)'
 
 [character]
-success_symbol = "[❯](fg:#6a9955)"
-error_symbol = "[❯](fg:#f44747)"
+success_symbol = "[❯](fg:#a6e3a1)"
+error_symbol = "[❯](fg:#f38ba8)"
