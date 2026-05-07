@@ -18,12 +18,14 @@ link() {
     echo "→ link:   $dst → $src"
 }
 
-link "$DOTFILES/hypr" "$CONFIG/hypr"
-# Los siguientes los iremos descomentando paso a paso:
-# link "$DOTFILES/waybar"    "$CONFIG/waybar"
-# link "$DOTFILES/swaync"    "$CONFIG/swaync"
-# link "$DOTFILES/fuzzel"    "$CONFIG/fuzzel"
-# link "$DOTFILES/kitty"     "$CONFIG/kitty"
+link "$DOTFILES/hypr"                   "$CONFIG/hypr"
+link "$DOTFILES/kitty"                  "$CONFIG/kitty"
+link "$DOTFILES/starship/starship.toml" "$CONFIG/starship.toml"
+
+# Próximos:
+# link "$DOTFILES/waybar" "$CONFIG/waybar"
+# link "$DOTFILES/swaync" "$CONFIG/swaync"
+# link "$DOTFILES/fuzzel" "$CONFIG/fuzzel"
 
 [[ -d "$backup_dir" ]] && echo "Backups en: $backup_dir"
 echo "✓ install.sh terminado"
