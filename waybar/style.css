@@ -1,27 +1,17 @@
-/* === Catppuccin Mocha palette === */
-@define-color base       #1e1e2e;
-@define-color mantle     #181825;
-@define-color crust      #11111b;
-@define-color surface0   #313244;
-@define-color surface1   #45475a;
-@define-color surface2   #585b70;
-@define-color text       #cdd6f4;
-@define-color subtext0   #a6adc8;
-@define-color subtext1   #bac2de;
-@define-color overlay0   #6c7086;
-@define-color blue       #89b4fa;
-@define-color lavender   #b4befe;
-@define-color sapphire   #74c7ec;
-@define-color sky        #89dceb;
-@define-color teal       #94e2d5;
-@define-color green      #a6e3a1;
-@define-color yellow     #f9e2af;
-@define-color peach      #fab387;
-@define-color maroon     #eba0ac;
-@define-color red        #f38ba8;
-@define-color mauve      #cba6f7;
-@define-color pink       #f5c2e7;
-@define-color flamingo   #f2cdcd;
+/* === Black & gray palette === */
+@define-color bg          #000000;
+@define-color bg-soft     #0d0d0d;
+@define-color surface0    #1a1a1a;
+@define-color surface1    #2a2a2a;
+@define-color surface2    #3a3a3a;
+@define-color border      #404040;
+@define-color text        #e6e6e6;
+@define-color subtext     #a8a8a8;
+@define-color muted       #707070;
+@define-color dim         #4a4a4a;
+@define-color accent      #ffffff;
+@define-color warning     #b0b0b0;
+@define-color critical    #d4d4d4;
 
 * {
     font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font";
@@ -31,13 +21,13 @@
 }
 
 window#waybar {
-    background-color: rgba(30, 30, 46, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     color: @text;
-    border-bottom: 1px solid alpha(@surface1, 0.6);
+    border-bottom: 1px solid @border;
     transition: background-color 0.3s;
 }
 
-/* Generic module: padding + spacing */
+/* Generic module */
 #workspaces,
 #window,
 #clock,
@@ -53,7 +43,8 @@ window#waybar {
     padding: 0 10px;
     margin: 4px 3px;
     border-radius: 8px;
-    background-color: alpha(@surface0, 0.7);
+    background-color: @surface0;
+    color: @text;
 }
 
 /* === Workspaces === */
@@ -64,31 +55,32 @@ window#waybar {
 #workspaces button {
     padding: 0 6px;
     margin: 0 1px;
-    color: @subtext0;
+    color: @muted;
     background: transparent;
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
 }
 
 #workspaces button:hover {
-    background-color: alpha(@surface2, 0.5);
+    background-color: @surface2;
     color: @text;
 }
 
 #workspaces button.active {
-    color: @lavender;
-    background-color: alpha(@lavender, 0.15);
+    color: @accent;
+    background-color: @surface2;
 }
 
 #workspaces button.urgent {
-    color: @red;
-    background-color: alpha(@red, 0.2);
+    color: @critical;
+    background-color: @surface2;
 }
 
 /* === Active window title === */
 #window {
-    color: @subtext1;
+    color: @subtext;
     font-style: italic;
+    background-color: transparent;
 }
 
 window#waybar.empty #window {
@@ -97,50 +89,50 @@ window#waybar.empty #window {
     margin: 0;
 }
 
-/* === Center: clock === */
+/* === Clock === */
 #clock {
-    color: @lavender;
+    color: @text;
     font-weight: bold;
 }
 
-/* === Right modules: each with accent color === */
-#cpu          { color: @blue;  }
-#memory       { color: @mauve; }
-#pulseaudio   { color: @pink;  }
-#pulseaudio.muted { color: @overlay0; }
-#backlight    { color: @yellow; }
-#network      { color: @teal; }
-#network.disconnected { color: @red; }
-#battery      { color: @green; }
-#battery.charging { color: @green; }
-#battery.warning:not(.charging)  { color: @peach; }
+/* === Right modules === */
+#cpu          { color: @subtext; }
+#memory       { color: @subtext; }
+#pulseaudio   { color: @subtext; }
+#pulseaudio.muted { color: @dim; }
+#backlight    { color: @subtext; }
+#network      { color: @subtext; }
+#network.disconnected { color: @dim; }
+#battery      { color: @subtext; }
+#battery.charging { color: @text; }
+#battery.warning:not(.charging)  { color: @warning; }
 #battery.critical:not(.charging) {
-    color: @red;
+    color: @critical;
     animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
-    to { opacity: 0.5; }
+    to { opacity: 0.4; }
 }
 
-#language     { color: @sapphire; }
+#language     { color: @subtext; }
 
 /* === Tray === */
-#tray > .passive    { -gtk-icon-effect: dim; }
+#tray > .passive { -gtk-icon-effect: dim; }
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
 }
 
-/* === Notification icon === */
+/* === Notification === */
 #custom-notification {
-    color: @flamingo;
+    color: @subtext;
     font-family: "JetBrainsMono Nerd Font";
 }
 
 /* === Tooltip === */
 tooltip {
-    background-color: @base;
-    border: 1px solid @surface2;
+    background-color: @bg-soft;
+    border: 1px solid @border;
     border-radius: 8px;
 }
 
