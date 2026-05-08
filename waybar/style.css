@@ -140,3 +140,18 @@ tooltip label {
     color: @text;
     padding: 4px;
 }
+
+/* === Módulo keybinds (toggle de lista) === */
+#custom-keybinds {
+    color: @subtext;
+    padding: 0 12px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    background-color: @surface0;
+    transition: all 0.2s ease;
+}
+
+#custom-keybinds:hover {
+    color: #f35638;
+    background-color: @surface1;
+}

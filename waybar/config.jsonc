@@ -6,6 +6,7 @@
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
+        "custom/keybinds",
         "hyprland/window"
     ],
     "modules-center": [
@@ -154,5 +155,11 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    "custom/keybinds": {
+        "format": "󰌌",
+        "tooltip": true,
+        "tooltip-format": "Click: ver keybinds",
+        "on-click": "/home/ian/dotfiles/scripts/show-keybinds.sh"
     }
 }
