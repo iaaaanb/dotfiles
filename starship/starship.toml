@@ -75,4 +75,4 @@ format = '[  $time ]($style)'
 
 [character]
 success_symbol = "[❯](fg:#a6e3a1)"
-error_symbol = "[❯](fg:#f38ba8)"
+error_symbol = "[❯](fg:#e64553)"
