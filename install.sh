@@ -23,13 +23,17 @@ link "$DOTFILES/kitty"                      "$CONFIG/kitty"
 link "$DOTFILES/starship/starship.toml"     "$CONFIG/starship.toml"
 link "$DOTFILES/waybar"                    "$CONFIG/waybar"
 link "$DOTFILES/swaync"                    "$CONFIG/swaync"
+link "$DOTFILES/fuzzel"                    "$CONFIG/fuzzel"
 link "$DOTFILES/waybar"                    "$CONFIG/waybar"
 link "$DOTFILES/swaync"                    "$CONFIG/swaync"
+link "$DOTFILES/fuzzel"                    "$CONFIG/fuzzel"
 
 # Próximos:
 # link "$DOTFILES/waybar" "$CONFIG/waybar"
 link "$DOTFILES/swaync"                    "$CONFIG/swaync"
+link "$DOTFILES/fuzzel"                    "$CONFIG/fuzzel"
 # link "$DOTFILES/swaync" "$CONFIG/swaync"
+link "$DOTFILES/fuzzel"                    "$CONFIG/fuzzel"
 # link "$DOTFILES/fuzzel" "$CONFIG/fuzzel"
 
 [[ -d "$backup_dir" ]] && echo "Backups en: $backup_dir"
