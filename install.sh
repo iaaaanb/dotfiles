@@ -21,6 +21,8 @@ link() {
 link "$DOTFILES/hypr"                       "$CONFIG/hypr"
 link "$DOTFILES/kitty"                      "$CONFIG/kitty"
 link "$DOTFILES/starship/starship.toml"     "$CONFIG/starship.toml"
+link "$DOTFILES/waybar"                    "$CONFIG/waybar"
+link "$DOTFILES/waybar"                    "$CONFIG/waybar"
 
 # Próximos:
 # link "$DOTFILES/waybar" "$CONFIG/waybar"

@@ -1,0 +1,150 @@
+/* === Catppuccin Mocha palette === */
+@define-color base       #1e1e2e;
+@define-color mantle     #181825;
+@define-color crust      #11111b;
+@define-color surface0   #313244;
+@define-color surface1   #45475a;
+@define-color surface2   #585b70;
+@define-color text       #cdd6f4;
+@define-color subtext0   #a6adc8;
+@define-color subtext1   #bac2de;
+@define-color overlay0   #6c7086;
+@define-color blue       #89b4fa;
+@define-color lavender   #b4befe;
+@define-color sapphire   #74c7ec;
+@define-color sky        #89dceb;
+@define-color teal       #94e2d5;
+@define-color green      #a6e3a1;
+@define-color yellow     #f9e2af;
+@define-color peach      #fab387;
+@define-color maroon     #eba0ac;
+@define-color red        #f38ba8;
+@define-color mauve      #cba6f7;
+@define-color pink       #f5c2e7;
+@define-color flamingo   #f2cdcd;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font";
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: @text;
+    border-bottom: 1px solid alpha(@surface1, 0.6);
+    transition: background-color 0.3s;
+}
+
+/* Generic module: padding + spacing */
+#workspaces,
+#window,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#backlight,
+#network,
+#battery,
+#tray,
+#custom-notification,
+#language {
+    padding: 0 10px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    background-color: alpha(@surface0, 0.7);
+}
+
+/* === Workspaces === */
+#workspaces {
+    padding: 0 6px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 1px;
+    color: @subtext0;
+    background: transparent;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: alpha(@surface2, 0.5);
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @lavender;
+    background-color: alpha(@lavender, 0.15);
+}
+
+#workspaces button.urgent {
+    color: @red;
+    background-color: alpha(@red, 0.2);
+}
+
+/* === Active window title === */
+#window {
+    color: @subtext1;
+    font-style: italic;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* === Center: clock === */
+#clock {
+    color: @lavender;
+    font-weight: bold;
+}
+
+/* === Right modules: each with accent color === */
+#cpu          { color: @blue;  }
+#memory       { color: @mauve; }
+#pulseaudio   { color: @pink;  }
+#pulseaudio.muted { color: @overlay0; }
+#backlight    { color: @yellow; }
+#network      { color: @teal; }
+#network.disconnected { color: @red; }
+#battery      { color: @green; }
+#battery.charging { color: @green; }
+#battery.warning:not(.charging)  { color: @peach; }
+#battery.critical:not(.charging) {
+    color: @red;
+    animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+    to { opacity: 0.5; }
+}
+
+#language     { color: @sapphire; }
+
+/* === Tray === */
+#tray > .passive    { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* === Notification icon === */
+#custom-notification {
+    color: @flamingo;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* === Tooltip === */
+tooltip {
+    background-color: @base;
+    border: 1px solid @surface2;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 4px;
+}
