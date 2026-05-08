@@ -18,9 +18,9 @@ link() {
     echo "→ link:   $dst → $src"
 }
 
-link "$DOTFILES/hypr"                   "$CONFIG/hypr"
-link "$DOTFILES/kitty"                  "$CONFIG/kitty"
-link "$DOTFILES/starship/starship.toml" "$CONFIG/starship.toml"
+link "$DOTFILES/hypr"                       "$CONFIG/hypr"
+link "$DOTFILES/kitty"                      "$CONFIG/kitty"
+link "$DOTFILES/starship/starship.toml"     "$CONFIG/starship.toml"
 
 # Próximos:
 # link "$DOTFILES/waybar" "$CONFIG/waybar"
