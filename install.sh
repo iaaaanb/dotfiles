@@ -22,10 +22,13 @@ link "$DOTFILES/hypr"                       "$CONFIG/hypr"
 link "$DOTFILES/kitty"                      "$CONFIG/kitty"
 link "$DOTFILES/starship/starship.toml"     "$CONFIG/starship.toml"
 link "$DOTFILES/waybar"                    "$CONFIG/waybar"
+link "$DOTFILES/swaync"                    "$CONFIG/swaync"
 link "$DOTFILES/waybar"                    "$CONFIG/waybar"
+link "$DOTFILES/swaync"                    "$CONFIG/swaync"
 
 # Próximos:
 # link "$DOTFILES/waybar" "$CONFIG/waybar"
+link "$DOTFILES/swaync"                    "$CONFIG/swaync"
 # link "$DOTFILES/swaync" "$CONFIG/swaync"
 # link "$DOTFILES/fuzzel" "$CONFIG/fuzzel"
 
