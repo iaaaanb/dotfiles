@@ -26,6 +26,7 @@ link "$DOTFILES/hypr/hyprland.conf"         "$CONFIG/hypr/hyprland.conf"
 link "$DOTFILES/hypr/conf.d"                "$CONFIG/hypr/conf.d"
 link "$DOTFILES/hyprlock/hyprlock.conf"     "$CONFIG/hypr/hyprlock.conf"
 link "$DOTFILES/hyprpaper/hyprpaper.conf"   "$CONFIG/hypr/hyprpaper.conf"
+link "$DOTFILES/hypridle/hypridle.conf" "$CONFIG/hypr/hypridle.conf"
 
 link "$DOTFILES/kitty"                      "$CONFIG/kitty"
 link "$DOTFILES/starship/starship.toml"     "$CONFIG/starship.toml"

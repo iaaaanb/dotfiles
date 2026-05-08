@@ -1,1 +1,0 @@
-/home/ian/dotfiles/hypr/conf.d
